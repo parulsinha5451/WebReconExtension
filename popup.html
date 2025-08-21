@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Site Recon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 400px;
+      height: 600px;
+      overflow: hidden; 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.5em;
+      text-align: center;
+      color: #00d4ff;
+      text-shadow: 0 0 5px #00d4ff99;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+
+    input {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border: 1px solid #00d4ff33;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      background: #00d4ff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
+    }
+
+    button:hover {
+      background: #00aacc;
+      box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 15px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #00d4ff;
+    }
+
+    .card p {
+      margin: 4px 0;
+      color: #e0e0e0;
+    }
+
+    #results {
+      max-height: 450px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+
+    #results::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>🔍 Website Recon</h2>
+  <input type="text" id="domainInput" placeholder="Enter domain (e.g. example.com)" />
+  <button id="lookupBtn">Lookup Domain</button>
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

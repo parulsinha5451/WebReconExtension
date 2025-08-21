@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Website Recon",
+  "version": "1.0",
+  "description": "Get WHOIS, DNS, IP info and vulnerabilities for any domain, including the current tab.",
+  "permissions": ["tabs", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon128.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
